@@ -1,4 +1,4 @@
-# MakeMultiHeadPlain
+# MakeMultiHeadNaive
 Use naive MultiheadAttention implement to replace nn.MultiheadAttention in pytorch
 
 本代码使用朴素的线性层来替换Pytorch中的[多头注意力](https://pytorch.org/docs/stable/generated/torch.nn.MultiheadAttention.html)，这使得基于torch.nn.MultiheadAttention实现的Transformer(比如[OpenClip](https://github.com/mlfoundations/open_clip))也可以使用Hugingface的PEFT(例如[LoRA](https://huggingface.co/docs/peft/conceptual_guides/lora))进行微调。
