@@ -149,7 +149,7 @@ if __name__ == '__main__':
     img = torch.rand(2, 3, 224, 224)
     result = visual_model(img)[0].cpu().detach().clone()
     for module in visual_model.transformer.resblocks:
-        new_module = ReplaceTorchMultiHeadAtt2PlainAtt()
+        new_module = PlainMultiHeadAttention()
         new_module.set_parameters(module.attn)
         module.attn = new_module
     result2 = visual_model(img)[0].cpu().detach().clone()
